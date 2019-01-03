@@ -45,8 +45,7 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
     private float dt;
     private float mProgress;
     private boolean running;
-    private @Direction
-    int direction;
+    private @Direction int direction;
 
 
     public WaveDrawable() {
@@ -72,6 +71,7 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
      */
     public void setDirection(@Direction int direction) {
         this.direction = direction;
+        invalidateSelf();
     }
 
     /**
@@ -136,7 +136,6 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
 
     @Override
     public void draw(@NonNull Canvas canvas) {
-        //System.out.println("draw");
         switch (direction) {
             case LEFT:
                 drawLeft(canvas);
@@ -165,7 +164,6 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
         float xoff = 0f;
         mWavePath.rewind();
         float waveBias = width * (1 - mProgress) + waveHeight * (1 - mProgress) - waveHeight * (mProgress);
-        //float waveBias = 400;
         for (int i = 0; i <= 320; i += 1) {
             double noise = SimplexNoise.noise(dt, xoff);
             mWavePath.lineTo(
@@ -187,7 +185,6 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
         float xoff = 0f;
         mWavePath.rewind();
         float waveBias = height * (1 - mProgress) + waveHeight * (1 - mProgress) - waveHeight * (mProgress);
-        //float waveBias = 400;
         for (int i = 0; i <= 320; i += 1) {
             double noise = SimplexNoise.noise(dt, xoff);
             mWavePath.lineTo(map(i, 0, 320, 0, width),
@@ -208,7 +205,6 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
         float xoff = 0f;
         mWavePath.rewind();
         float waveBias = width * (mProgress) + waveHeight * (mProgress) - waveHeight * (1 - mProgress);
-        //float waveBias = 400;
         for (int i = 0; i <= 320; i += 1) {
             double noise = SimplexNoise.noise(dt, xoff);
             mWavePath.lineTo(
@@ -230,7 +226,6 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
         float xoff = 0f;
         mWavePath.rewind();
         float waveBias = height * (mProgress) + waveHeight * (mProgress) - waveHeight * (1 - mProgress);
-        //float waveBias = 400;
         for (int i = 0; i <= 320; i += 1) {
             double noise = SimplexNoise.noise(dt, xoff);
             mWavePath.lineTo(map(i, 0, 320, 0, width),
