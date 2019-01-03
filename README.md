@@ -3,13 +3,13 @@
 # WaveDrawable
 打造最接近真实自然的水波loading动画
 
-##效果
+## 效果
 
 ![9.PNG](./screen/9.PNG)
 ![7.gif](./screen/7.gif)
 ![8.gif](./screen/8.gif)
 
-##使用
+## 使用
 1. Add the JitPack repository to your build file
 ```
 	allprojects {
@@ -26,7 +26,7 @@
 	}
 
 ```
-##设置
+## 设置
 支持以下属性
 
 *  direction
