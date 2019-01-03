@@ -8,6 +8,7 @@
 ![9.PNG](./screen/9.PNG)
 ![7.gif](./screen/7.gif)
 ![8.gif](./screen/8.gif)
+![9.gif](./screen/9.gif)
 
 ## 使用
 1. Add the JitPack repository to your build file
