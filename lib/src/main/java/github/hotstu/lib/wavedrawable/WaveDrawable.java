@@ -66,10 +66,18 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
         invalidateSelf();
     }
 
-    public void setDirection(int direction) {
+    /**
+     * 方向
+     * @param direction
+     */
+    public void setDirection(@Direction int direction) {
         this.direction = direction;
     }
 
+    /**
+     * 进度
+     * @param progress
+     */
     public void setProgress(@FloatRange(from = 0.0, to = 1.0) float progress) {
         if (mProgress != progress) {
             mProgress = progress;
