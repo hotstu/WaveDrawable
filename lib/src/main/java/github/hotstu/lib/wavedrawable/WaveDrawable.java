@@ -66,8 +66,9 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
     }
 
     /**
-     * 方向
-     * @param direction
+     * the directon the wave expanding, can be onf of TOP LEFT RIGHT BOTTOM
+     * 方向，可以是TOP LEFT RIGHT BOTTOM
+     * @param direction TOP LEFT RIGHT BOTTOM
      */
     public void setDirection(@Direction int direction) {
         this.direction = direction;
@@ -75,8 +76,9 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
     }
 
     /**
-     * 进度
-     * @param progress
+     * the expanding progress, in [0, 1]
+     * 进度 [0, 1]
+     * @param progress [0, 1]
      */
     public void setProgress(@FloatRange(from = 0.0, to = 1.0) float progress) {
         if (mProgress != progress) {
@@ -91,9 +93,10 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
 
 
     /**
+     * the height of the wave slop, default is height * .05f
      * 设置波峰高度，px,默认为height * .05f
      *
-     * @param waveHeight
+     * @param waveHeight default is height * .05f
      */
     public void setWaveHeight(float waveHeight) {
         if (this.waveHeight != waveHeight) {
@@ -111,9 +114,10 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
     }
 
     /**
+     * the strength of the wave, the larger the more slop in area, default is 0.01f
      * 设置波浪强度 数值越大单位区域内峰谷越多,默认0.01f
      *
-     * @param waveStrength
+     * @param waveStrength default is 0.01f
      */
     public void setWaveStrength(float waveStrength) {
         if (this.waveStrength != waveStrength) {
@@ -123,8 +127,9 @@ public class WaveDrawable extends Drawable implements Progressable, Animatable {
     }
 
     /**
+     * the speed of the wave, the larger the wave change faster, default is 0.05f
      * 设置波浪速度 数值越大波浪变化越快,默认0.05f
-     * @param speed
+     * @param speed default is 0.05f
      */
     public void setWaveSpeed(float speed) {
         if (this.waveSpeed != speed) {
