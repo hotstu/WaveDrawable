@@ -2,7 +2,7 @@
 
 # WaveDrawable
 
-extremely real  & natural wave-like loading drawabl
+extremely real & natural wave-like loading drawable
 
 打造最接近真实自然的水波loading动画
 
@@ -35,7 +35,7 @@ below is the properties can be configed/支持以下属性
 
 *  direction
 
-the directon the wave expanding, can be onf of `TOP LEFT RIGHT BOTTOM`
+the directon the wave expanding, can be one of `TOP LEFT RIGHT BOTTOM`
 
 方向，可以是TOP LEFT RIGHT BOTTOM
 
